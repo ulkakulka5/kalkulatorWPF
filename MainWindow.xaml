@@ -1,0 +1,129 @@
+<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Kalkulator"
+        Height="560"
+        Width="380"
+        MinHeight="560"
+        MinWidth="380"
+        ResizeMode="CanMinimize">
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="65"/>
+            <RowDefinition Height="55"/>
+            <RowDefinition Height="55"/>
+            <RowDefinition Height="55"/>
+            <RowDefinition Height="55"/>
+            <RowDefinition Height="55"/>
+            <RowDefinition Height="55"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        
+        <Label x:Name="etykietaHistoria"
+               Grid.Row="0"
+               Grid.ColumnSpan="5"
+               Content=""
+               FontSize="14"
+               HorizontalContentAlignment="Right"/>
+
+        
+        <Border Grid.Row="1"
+                Grid.ColumnSpan="5"
+                BorderBrush="Black"
+                BorderThickness="1"
+                CornerRadius="10"
+                Margin="3">
+
+            <Label x:Name="poleEkran"
+                   Content="0"
+                   FontSize="32"
+                   FontWeight="Bold"
+                   HorizontalContentAlignment="Right"
+                   VerticalContentAlignment="Center"
+                   Padding="5"/>
+        </Border>
+
+        
+        <Button Grid.Row="2" Grid.Column="0"
+                Content="MC" Click="PrzyciskMC_Click"/>
+        <Button x:Name="przyciskMR"
+        Grid.Row="2" Grid.Column="1"
+        Content="MR"
+        Click="PrzyciskMR_Click"/>
+        <Button Grid.Row="2" Grid.Column="2"
+                Content="MS" Click="PrzyciskMS_Click"/>
+        <Button Grid.Row="2" Grid.Column="3"
+                Content="C" Click="PrzyciskWyczysc_Click"/>
+        <Button Grid.Row="2" Grid.Column="4"
+                Content="⌫" Click="PrzyciskCofnij_Click"/>
+
+        
+        <Button Grid.Row="3" Grid.Column="0"
+                Content="(" Click="PrzyciskZnak_Click"/>
+        <Button Grid.Row="3" Grid.Column="1"
+                Content=")" Click="PrzyciskZnak_Click"/>
+        <Button Grid.Row="3" Grid.Column="2"
+                Content="^" Click="PrzyciskZnak_Click"/>
+        <Button Grid.Row="3" Grid.Column="3"
+                Content="√" Click="PrzyciskPierwiastek_Click"/>
+        <Button Grid.Row="3" Grid.Column="4"
+                Content="1/x" Click="PrzyciskUlamek_Click"/>
+
+        
+        <Button Grid.Row="4" Grid.Column="0"
+                Content="7" Click="PrzyciskZnak_Click"/>
+        <Button Grid.Row="4" Grid.Column="1"
+                Content="8" Click="PrzyciskZnak_Click"/>
+        <Button Grid.Row="4" Grid.Column="2"
+                Content="9" Click="PrzyciskZnak_Click"/>
+        <Button Grid.Row="4" Grid.Column="3"
+                Content="/" Click="PrzyciskZnak_Click"/>
+        <Button Grid.Row="4" Grid.Column="4"
+                Content="±" Click="PrzyciskZmienZnak_Click"/>
+
+        
+        <Button Grid.Row="5" Grid.Column="0"
+                Content="4" Click="PrzyciskZnak_Click"/>
+        <Button Grid.Row="5" Grid.Column="1"
+                Content="5" Click="PrzyciskZnak_Click"/>
+        <Button Grid.Row="5" Grid.Column="2"
+                Content="6" Click="PrzyciskZnak_Click"/>
+        <Button Grid.Row="5" Grid.Column="3"
+                Content="*" Click="PrzyciskZnak_Click"/>
+        <Button Grid.Row="5" Grid.Column="4"
+                Content="-" Click="PrzyciskZnak_Click"/>
+
+        <Button Grid.Row="6" Grid.Column="0"
+                Content="1" Click="PrzyciskZnak_Click"/>
+        <Button Grid.Row="6" Grid.Column="1"
+                Content="2" Click="PrzyciskZnak_Click"/>
+        <Button Grid.Row="6" Grid.Column="2"
+                Content="3" Click="PrzyciskZnak_Click"/>
+        <Button Grid.Row="6" Grid.Column="3"
+                Content="+" Click="PrzyciskZnak_Click"/>
+        <Button Grid.Row="6" Grid.Column="4"
+                Content="=" Click="PrzyciskRownaSie_Click"/>
+
+       
+        <Button Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2"
+                Content="0" Click="PrzyciskZnak_Click"/>
+        <Button Grid.Row="7" Grid.Column="2"
+                Content="," Click="PrzyciskPrzecinek_Click"/>
+        <Button Grid.Row="7" Grid.Column="3"
+          Content="°C" Click="PrzyciskC_Click"/>
+
+        <Button Grid.Row="7" Grid.Column="4"
+          Content="°F" Click="PrzyciskF_Click"/>
+
+    </Grid>
+</Window>
